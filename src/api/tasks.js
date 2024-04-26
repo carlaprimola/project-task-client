@@ -1,9 +1,10 @@
 import instance from "./axios";
+import axios from 'axios';
 
 //Mostrar todas las tareas
 export const getTasksRequest = async () => {
   try {
-    const response = await instance.get("/tasks")
+    const response = await axios.get("https://project-task-server-4.onrender.com/tasks")
     
     return response.data
      

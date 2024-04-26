@@ -1,7 +1,7 @@
 import axios from './axios.js';
 
 
-const API = 'http://localhost:3000/api';
+const API = 'https://project-task-server-4.onrender.com/api';
 
 export const registerRequest = user => {
   user.email = user.email.trim().toLowerCase();//quita espacios y solo permite minusculas

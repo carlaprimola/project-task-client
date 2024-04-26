@@ -72,18 +72,18 @@ export const AuthProvider = ({children}) => {
             setUser(res.data);
             //console.log(res.data)
         } catch (error) {
-            if (error.response) {
-                console.log('Se produjo un error:', error);
-                if (error.response.status === 429) {
-                    // Añadir el mensaje de error del limitador a signinErrors
-                    console.log(error.response.data)
-                    setErrors(prevErrors => [...prevErrors, error.response.data]);
-                } else if (Array.isArray(error.response.data)) {
-                    console.log(error.response.data)
-                    return setErrors(error.response.data);
+            // if (error.response) {
+            //     console.log('Se produjo un error:', error);
+            //     if (error.response.status === 429) {
+            //         // Añadir el mensaje de error del limitador a signinErrors
+            //         console.log(error.response.data)
+            //         setErrors(prevErrors => [...prevErrors, error.response.data]);
+            //     } else if (Array.isArray(error.response.data)) {
+            //         console.log(error.response.data)
+            //         return setErrors(error.response.data);
                     
-                }
-            }
+            //     }
+            // }
         }
     }
     
